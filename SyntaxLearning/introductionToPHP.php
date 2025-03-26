@@ -26,20 +26,72 @@ if($is_admin && !$is_logged_in){
 //Control Structures
 $score = 78;
 if($score >= 99){
-	echo"BIG";
+	echo"BIG\n";
 } elseif ($score >=85) {
-	echo"MEDIUM";
+	echo"MEDIUM\n";
 }else{
-	echo "SMALL";
+	echo "SMALL\n";
 }
 
 
 //Switch Case
-$day = "Monday";
+$day = "Tuesday";
 switch($day){
-	case "":
-		// code...
+	case "Monday":
+		echo"It's Monday!!!\n";
 		break;
+	case "Tuesday":
+		echo "It's Turesday!\n";
+		break;
+	default:
+		echo"ETC, you choose what day it is, I wont write more non-sense\n";
+	
 }
 
+//For loops
+for($i = 1; $i <= 5 ; $i++){
+	echo "Number: $i\n";
+}
+
+
+//While loops
+$i=1;
+while ($i <=6){
+	echo"Num: $i\n";
+	$i++;
+}
+
+//Functions
+
+function greet($name){
+	return "Hello, $name";
+}
+
+echo greet("something\n");
+
+
+//Arrays
+
+$fruits=["mere\n", "pere\n","piersici\n"];
+echo $fruits[1];
+
+//Associate array
+$person = ["name" => "John\n", "age" => 35];
+echo $person["name"];
+
+//Looping thrtough an Array
+$colors = ["Red", "A","B", 213];
+foreach ($colors as $color){
+	echo "$color \n";
+}
+
+
+// SUPER GLOBALS
+
+// URL: example.com/index.php?name=John
+echo $_GET['name']; 
+
+
+
+//Workling with forms - check other files
 ?>
