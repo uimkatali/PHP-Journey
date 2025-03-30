@@ -44,3 +44,32 @@
     # resource
     # null
 
+
+
+
+    echo "<br/>";
+
+#TYPE HINTING EXAMPLE
+echo "Type HINTING: <br/>";
+function sum(int $x, int $y){
+#if you specify a type here in the param settings, there will be returned as that type, not as they are as a result
+    var_dump($x,$y);
+    return $x + $y;
+}
+
+echo var_dump(sum(123,23.04)).'<br/>';
+
+#TYPE JUGGLING / TYPE COERCION
+    # php will convert to the specified data type, like from string '3' to int 3
+    #if the value cant be converted into the type specified, it will throw an error
+function sth(int $x, int $y){
+    #we can override the value here for x or y by $x = 7.654, it will return float
+    var_dump($x, $y);
+    echo "<br/>";
+    return $x + $y;
+}
+echo "<br/> TYPE COERCION: <br/>";
+
+$sum = sth(5, '55');
+echo $sum . '<br/>';
+var_dump($sum); 
